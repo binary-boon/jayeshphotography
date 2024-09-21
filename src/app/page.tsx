@@ -1,7 +1,7 @@
-import Image from "next/image";
+import HeroSlider from "../components/HeroSlider/HeroSlider.jsx"
 
 export default function Home() {
   return (
-    <div>hi there</div>
+    <HeroSlider/>
   );
 }
