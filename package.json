@@ -1,5 +1,5 @@
 {
-  "name": "jkp-next",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.6"
+    "@tailwindcss/postcss": "^4.0.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "8.43.0",
+    "framer-motion": "^10.12.17",
+    "next": "^14.2.23",
+    "postcss": "^8.5.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.83.4",
+    "tailwindcss": "^4.0.1"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.6",
-    "@eslint/eslintrc": "^3"
+    "eslint-config-next": "^14.2.23"
   }
 }
