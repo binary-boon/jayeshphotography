@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function FooterContent() {
   return (
-    <div className='bg-[#4E4E5A] py-8 px-12 h-full w-full flex flex-col justify-between'>
+    <div className='bg-[#fffff] py-8 px-12 h-full w-full flex flex-col justify-between'>
         <Section1 />
         <Section2 />
     </div>
@@ -29,7 +29,7 @@ const Section2 = () => {
 const Nav = () => {
     return (
         <div className='flex shrink-0 gap-20'>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col'>
                 <h3 className='mb-2 uppercase text-[#ffffff80]'>About</h3>
                 <p>Home</p>
                 <p>Projects</p>
