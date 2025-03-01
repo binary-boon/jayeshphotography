@@ -1,14 +1,15 @@
 import HeroSlider from "../components/HeroSlider/HeroSlider";
-import Numtile from "../components/NumberTicker/Numtile"
+import AnimCounter from "../components/NumberTicker/AnimatedCounters"
 
  function Home() {
   return (
-    <main >
-
-    <HeroSlider/>
-    <Numtile/>
     
-    </main>
+    <div>
+    <HeroSlider/>
+    <AnimCounter/>
+    </div>
+    
+    
 
   )
 }
