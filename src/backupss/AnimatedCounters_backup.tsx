@@ -21,7 +21,7 @@ export default function AnimatedCounters() {
       number: "50+", 
       value: 50, 
       color: "bg-rose-100 text-rose-600",
-      icon: "/images/weddings-captured.png"
+      icon: "/images/experience.png"
     },
     { 
       label: "Happy Clients", 
@@ -132,12 +132,12 @@ export default function AnimatedCounters() {
                    height={128} 
                     className="object-contain"
                   />
-                </div>
+              </div>
 
-          <h3 className={styles.number}>
+          <h3 className={`text-5xl md:text-6xl font-bold mb-2 ${textColor} font-serif tracking-tight`}>
             {count}{item.number.includes('+') ? '+' : ''}
           </h3>
-          <p className={styles.text}>
+          <p className="text-lg md:text-xl font-medium text-gray-700 text-center mt-2">
             {item.label}
           </p>
         </div>
@@ -146,9 +146,9 @@ export default function AnimatedCounters() {
   };
 
   return (
-    <section className={styles.section}>
-      <div className={styles.bg}>
-        <h2 className={styles.h2}>
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 font-serif">
           Our Photography Achievements
         </h2>
         <div className={styles.flexDiv}>

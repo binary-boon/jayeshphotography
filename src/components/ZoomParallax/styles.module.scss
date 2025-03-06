@@ -1,6 +1,7 @@
 .container{
     height: 300vh;
     position: relative;
+    background-color: black;
     .sticky{
         position: sticky;
         overflow: hidden;
@@ -73,3 +74,18 @@
         }
     }
 }
+
+.overlayText {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+

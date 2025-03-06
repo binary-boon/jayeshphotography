@@ -1,7 +1,54 @@
+.bg{
+    background-color: black;
+}
+
 .container{
     display: flex;
-    background: wheat;
+    flex-direction: row;
+    background-color: brown;
+    justify-items: center;
+    justify-content: center;
     width: 100%;
     height: 50vh;
 }
+
+.section{
+    background-color: black;
+}
+
+.h2{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.innerDiv{
+    display: flex; 
+    flex-direction: row;
+    background-color: black;
+    
+    
+}
+
+.text{
+
+    color: white;
+    font-size: 2rem;
+
+}
+
+.number{
+    color: white;
+    font-size: 2rem;
+}
+
+.flexDiv{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+}
+
 

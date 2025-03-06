@@ -1,5 +1,5 @@
 "use client"
-import AnimatedCounter from "./AnimatedCounter"
+import AnimatedCounter from "./AnimatedCounters"
 import styles from "./numticker.module.css"
 
 const Numtile = ()=>{
