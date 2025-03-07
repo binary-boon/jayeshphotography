@@ -3,6 +3,7 @@ import AnimCounter from "../components/NumberTicker/AnimatedCounters"
 import Galleryel from "./gallery"
 import YouTubeChannelVideos from "../components/Youtube/YoutubeChannelVideos";
 import EnvironmentDebug from "../components/EnvironmentDebug/EnvironmentDebug"
+import ParallaxSection from "../components/ScrollParallax/ParallaxSection";
 
  function Home() {
   return (
@@ -11,7 +12,9 @@ import EnvironmentDebug from "../components/EnvironmentDebug/EnvironmentDebug"
     <HeroSlider/>
     <AnimCounter/>
     <Galleryel/>
+
     <YouTubeChannelVideos/>
+    <ParallaxSection/>
     <EnvironmentDebug/>
     
     </div>
