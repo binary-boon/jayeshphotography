@@ -1,0 +1,21 @@
+.linkscontainer{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    background-color: aqua;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    font-size: x-large;
+    font-weight: bolder;
+    justify-content: space-around;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: space-around;
+}

@@ -7,18 +7,32 @@ import backgroundImg from "../../../public/images/parallax-bg.jpg";
 
 const ParallaxSection = () => {
   return (
-    <ParallaxProvider>
+    
       <div className={styles.parallaxContainer}>
         {/* Background Image with Parallax Effect */}
-        <Parallax speed={-20}>
-        <Image 
-    src={backgroundImg} 
-    alt="Background" 
-    layout="fill" 
-    objectFit="cover" 
-    className={styles.parallaxBackground} 
-  />
-        </Parallax>
+        {/* <Parallax speed={-5}>
+  <div className={styles.parallaxBackground}>
+    <Image className={styles.img}
+      src={backgroundImg} 
+      alt="Background" 
+      
+      fill 
+      style={{ objectFit: 'cover' }}
+    />
+  </div>
+</Parallax> */}
+
+<Parallax speed={20}>
+  <div className={styles.parallaxBackground}>
+    <Image 
+      src={backgroundImg} 
+      alt="Background" 
+      fill 
+      style={{ objectFit: 'cover' }}
+    />
+  </div>
+</Parallax>
+
 
         {/* Main Content */}
         <div className={styles.content}>
@@ -32,7 +46,7 @@ const ParallaxSection = () => {
         {/* Dark Overlay */}
         <div className={styles.overlay}></div>
       </div>
-    </ParallaxProvider>
+    
   );
 };
 

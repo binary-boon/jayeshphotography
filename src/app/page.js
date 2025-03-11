@@ -3,7 +3,8 @@ import AnimCounter from "../components/NumberTicker/AnimatedCounters"
 import Galleryel from "./gallery"
 import YouTubeChannelVideos from "../components/Youtube/YoutubeChannelVideos";
 import EnvironmentDebug from "../components/EnvironmentDebug/EnvironmentDebug"
-import ParallaxSection from "../components/ScrollParallax/ParallaxSection";
+import MyParallaxProvider from "../components/ScrollParallax/MyParallaxProvider";
+import AboutUsIntro from "../components/AboutUs/AboutUsIntro";
 
  function Home() {
   return (
@@ -11,10 +12,13 @@ import ParallaxSection from "../components/ScrollParallax/ParallaxSection";
     <div>
     <HeroSlider/>
     <AnimCounter/>
+    <AboutUsIntro/>
     <Galleryel/>
 
+    <MyParallaxProvider/>
+
     <YouTubeChannelVideos/>
-    <ParallaxSection/>
+   
     <EnvironmentDebug/>
     
     </div>

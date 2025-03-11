@@ -1,4 +1,11 @@
 import React from 'react'
+import styles from "./footer.module.css"
+import { BiLogoInstagramAlt } from "react-icons/bi";
+import { GrGoogle } from "react-icons/gr";
+import { MdEmail, MdMail } from "react-icons/md";
+import { ImFacebook2 } from "react-icons/im"
+import { FaFacebook } from 'react-icons/fa';
+
 
 export default function FooterContent() {
   return (
@@ -20,7 +27,7 @@ const Section1 = () => {
 const Section2 = () => {
     return (
         <div className='flex justify-between items-end'>
-            <h1 className='text-[14vw] leading-[0.8] mt-10'>Sticky Footer</h1>
+            <h1 className='text-[9vw] leading-[0.8] mt-10'>Jayesh Photography</h1>
             <p>©copyright</p>
         </div>
     )
@@ -28,20 +35,24 @@ const Section2 = () => {
 
 const Nav = () => {
     return (
-        <div className='flex shrink-0 gap-20'>
-            <div className='flex flex-col'>
-                <h3 className='mb-2 uppercase text-[#ffffff80]'>About</h3>
+        <div className={styles.linkscontainer}>
+            <div className={styles.links}>
+                
                 <p>Home</p>
+                <h3>About</h3>
                 <p>Projects</p>
-                <p>Our Mission</p>
+                <p>Gallery</p>
                 <p>Contact Us</p>
             </div>
-            <div className='flex flex-col gap-2'>
-                <h3 className='mb-2 uppercase text-[#ffffff80]'>Education</h3>
-                <p>News</p>
-                <p>Learn</p>
-                <p>Certification</p>
-                <p>Publications</p>
+            <div className={styles.socialIcons}>
+                
+                <BiLogoInstagramAlt size={40}/>
+                <ImFacebook2 size={30}/>
+                <ImFacebook2 size={30}/>
+                <GrGoogle size={30}/>
+                <MdMail size={40}/>
+
+                
             </div>
         </div>
     )

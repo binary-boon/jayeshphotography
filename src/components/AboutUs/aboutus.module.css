@@ -1,0 +1,11 @@
+.outerContainer{
+    display: flex;
+}
+
+
+.KhaturiaInfo{
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
