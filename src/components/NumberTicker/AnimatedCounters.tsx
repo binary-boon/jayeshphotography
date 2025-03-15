@@ -18,15 +18,15 @@ export default function AnimatedCounters() {
   const counters: CounterItem[] = [
     { 
       label: "Weddings Captured", 
-      number: "50+", 
-      value: 50, 
+      number: "500+", 
+      value: 500, 
       color: "bg-rose-100 text-rose-600",
       icon: "/images/weddings-captured.png"
     },
     { 
       label: "Happy Clients", 
-      number: "100+", 
-      value: 100, 
+      number: "250+", 
+      value: 250, 
       color: "bg-sky-100 text-sky-600",
       icon: "/images/happy-clients.png" 
     },
