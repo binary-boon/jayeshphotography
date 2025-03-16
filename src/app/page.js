@@ -14,11 +14,12 @@ import ServiceSection from "../components/ServiceSection/ServiceSection";
     <HeroSlider/>
     <AnimCounter/>
     <AboutUsIntro/>
+    <ServiceSection/>
     <Galleryel/>
 
     <MyParallaxProvider/>
 
-    <ServiceSection/>
+    
 
     <YouTubeChannelVideos/>
    

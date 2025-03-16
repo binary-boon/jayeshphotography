@@ -14,23 +14,19 @@ const links = [
     src: "home.png"
   },
   {
-    title: "Shop",
+    title: "About",
     href: "/shop",
-    src: "shop.png"
+    src: "1.jpg"
   },
+  
   {
-    title: "About Us",
-    href: "/about",
-    src: "home.png"
-  },
-  {
-    title: "Lookbook",
-    href: "/lookbook",
+    title: "Gallery",
+    href: "/Gallery",
     src: "lookbook.png"
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "/Contact",
     src: "contact.png"
   }
 ]

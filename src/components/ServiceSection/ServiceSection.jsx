@@ -34,15 +34,21 @@ const ServiceSection = () => {
                         >
                             <Image 
                                 src={service.img} 
-                                className={`${hoveredIndex === index ? Styles.incSize : Styles.orgSize}`} 
+                                className={`${hoveredIndex === index ?   Styles.orgSize : Styles.incSize}`} 
                                 width={360} 
                                 alt={service.title}
                             />
                         </div>
                     </div>
                 ))}
+
+                
             </div>   
+
+            <div className={Styles.btnDiv}><button className={Styles.btn}>Get Free Consulation!</button></div>
         </div>
+
+        
     );
 }
 
