@@ -21,8 +21,8 @@ const links = [
   
   {
     title: "Gallery",
-    href: "/Gallery",
-    src: "lookbook.png"
+    href: "/lgGallery",
+    src: "4.png"
   },
   {
     title: "Contact",
