@@ -17,7 +17,7 @@ function ElGallery() {
   const galleryRef = useRef<any>(null);
 
   const onInit = (detail: any) => {
-    galleryRef.current = detail.instance; // ✅ Store LightGallery instance
+    galleryRef.current = detail.instance;
     console.log("LightGallery has been initialized", detail);
   };
 
@@ -25,8 +25,13 @@ function ElGallery() {
 
   return (
     <div className="p-4">
-      {/* ✅ LightGallery should have <a> tags as direct children */}
-      <LightGallery onInit={onInit} speed={500} plugins={[lgThumbnail, lgZoom]}>
+      {/* ✅ Apply grid styling directly inside LightGallery */}
+      <LightGallery
+        onInit={onInit}
+        speed={500}
+        plugins={[lgThumbnail, lgZoom]}
+        elementClassNames="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
         {images.map((num) => (
           <a
             key={num}
@@ -43,24 +48,12 @@ function ElGallery() {
           </a>
         ))}
       </LightGallery>
-
-      {/* ✅ Wrap images in a grid, but LightGallery works separately */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-        {images.map((num) => (
-          <a key={num} href={`/images/${num}.jpg`} className="block">
-            <img
-              alt={`img${num}`}
-              src={`/images/${num}.jpg`}
-              className="w-full h-auto object-cover rounded-lg"
-            />
-          </a>
-        ))}
-      </div>
     </div>
   );
 }
 
 export default ElGallery;
+
 
 
 
