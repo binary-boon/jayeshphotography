@@ -13,11 +13,24 @@ const HeroSlider = () => {
 
   const imgarr = [1, 2, 3, 4];
   const thumbsarr = [1, 2, 3, 4];
+  const headingarr = [
+    "Moments That Last a Lifetime",
+    "Pre-Wedding Magic",
+    "Destination Weddings, Perfectly Framed",
+    "Cinematic Storytelling",
+  ];
+  const subheadarr = [
+    "Experience wedding photography that captures not just faces but emotions, turning your love story into timeless memories.",
+    "From scenic landscapes to intimate moments, we bring your pre-wedding dreams to life with breathtaking photography.",
+    "Whether it’s the beaches of Maldives or the palaces of Jaipur, we travel with you to capture your most cherished moments.",
+    "Relive your wedding with our cinematic videography, where every detail is beautifully preserved.",
+  ];
+  const btntextarr = ["View Our Work", "Explore Pre-Wedding", "Discover Destinations", "Watch Our Films"];
 
   let runTimeOut;
   let runNextAuto;
   const timeRunning = 3000;
-  const timeAutoNext = 7000;
+  const timeAutoNext = 4000;
   let isTransitioning = false;
 
   const resetTimer = () => {
@@ -84,17 +97,15 @@ const HeroSlider = () => {
   return (
     <div className={styles.carousel} ref={carouselRef}>
       <div className={styles.list} ref={sliderRef}>
-        {imgarr.map((i) => (
+        {imgarr.map((i, index) => (
           <div key={i} className={`item ${styles.item}`}>
             <img src={`/images/slide-${i}.jpg`} alt={`Slide ${i}`} />
             <div className={styles.content}>
-              <div className={styles.author}>Wedding Photography</div>
-              <div className={styles.title}>Landscape Vibe</div>
-              <div className={styles.topic}>Photo</div>
-              <div className={styles.des}>Lorem ipsum dolor sit amet...</div>
+              {/* Show only the corresponding heading, subheading, and button */}
+              <div className={styles.title}>{headingarr[index]}</div>
+              <div className={styles.des}>{subheadarr[index]}</div>
               <div className={styles.buttons}>
-                <button>SEE MORE</button>
-                <button>SUBSCRIBE</button>
+                <button>{btntextarr[index]}</button>
               </div>
             </div>
           </div>
@@ -105,10 +116,7 @@ const HeroSlider = () => {
         {thumbsarr.map((i, index) => (
           <div key={i} className={`item ${styles.item} ${index === 0 ? styles.active : ""}`}>
             <img src={`/images/slide-${i}.jpg`} alt={`Thumbnail ${i}`} />
-            <div className={styles.content}>
-              <div className={styles.title}>{`Name Slider ${i}`}</div>
-              <div className={styles.description}>Description</div>
-            </div>
+            
           </div>
         ))}
       </div>

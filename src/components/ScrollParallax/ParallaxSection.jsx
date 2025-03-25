@@ -36,9 +36,9 @@ const ParallaxSection = () => {
 
         {/* Main Content */}
         <div className={styles.content}>
-          <h1 className={styles.title}>Your Title Here</h1>
+          <h1 className={styles.title}>Let’s Create Something Beautiful</h1>
           <p className={styles.paragraph}>
-            This is a sample paragraph with some engaging content to enhance the visual appeal of the section.
+          Whether it's an intimate wedding or a grand celebration, we’d love to be a part of your journey. Let’s talk and bring your dream wedding to life.
           </p>
           <button className={styles.button}>Learn More</button>
         </div>

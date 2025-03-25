@@ -15,9 +15,9 @@ const AboutUsIntro =()=>{
 
         <div className={styles.KhaturiaInfo}>
 
-            <h1 className={styles.KhaturiaHeading}>Meet the Photographer</h1>
-            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae dicta similique aliquam repudiandae voluptatum deleniti hic voluptate, ut rerum qui est temporibus commo</h2>
-            <button>About US</button>
+            <h1 className={styles.KhaturiaHeading}>Crafting Memories with Passion</h1>
+            <h2>Capturing moments is easy, but capturing the essence of emotions is an art. With over 500 weddings shot across the globe, Jayesh Khaturia Photography ensures that your special day is framed in perfection. Our team of skilled photographers and cinematographers work passionately to bring joy to every couple and their families.</h2>
+            <button>Learn More</button>
 
         </div>
 

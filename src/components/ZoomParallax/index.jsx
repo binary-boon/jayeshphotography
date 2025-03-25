@@ -72,7 +72,8 @@ export default function Index() {
                                     className={styles.overlayText}
                                     style={{ opacity: textOpacity, visibility: textVisibility }}
                                 >
-                                    <h1>Stunning Visuals</h1>
+                                    <h1>A Glimpse of Love & Celebration</h1>
+                                    <h2>Dive into our extensive gallery and experience the magic we create with every shot. From candid moments to stunning portraits, witness the beauty of weddings through our lens.</h2>
                                     <button>Explore More</button>
                                 </motion.div>
                             )}
