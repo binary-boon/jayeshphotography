@@ -82,10 +82,25 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     background: rgba(0, 0, 0, 0.5);
     padding: 1rem 2rem;
     border-radius: 8px;
     transition: opacity 0.3s ease-in-out;
+}
+
+.overlayText h2{
+    font-size: 0.5rem;
+}
+
+.overlayText h1{
+    font-size: 0.75rem;
+}
+
+.overlayText button{
+    font-size: .5rem;
+    border: none;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 

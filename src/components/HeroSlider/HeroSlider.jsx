@@ -9,10 +9,8 @@ const HeroSlider = () => {
   const carouselRef = useRef(null);
   const nextRef = useRef(null);
   const prevRef = useRef(null);
-  const timeRef = useRef(null);
-
+  
   const imgarr = [1, 2, 3, 4];
-  const thumbsarr = [1, 2, 3, 4];
   const headingarr = [
     "Moments That Last a Lifetime",
     "Pre-Wedding Magic",
@@ -20,24 +18,26 @@ const HeroSlider = () => {
     "Cinematic Storytelling",
   ];
   const subheadarr = [
-    "Experience wedding photography that captures not just faces but emotions, turning your love story into timeless memories.",
+    "Experience wedding photography that captures emotions, turning your love story into timeless memories.",
     "From scenic landscapes to intimate moments, we bring your pre-wedding dreams to life with breathtaking photography.",
     "Whether it’s the beaches of Maldives or the palaces of Jaipur, we travel with you to capture your most cherished moments.",
     "Relive your wedding with our cinematic videography, where every detail is beautifully preserved.",
   ];
   const btntextarr = ["View Our Work", "Explore Pre-Wedding", "Discover Destinations", "Watch Our Films"];
 
-  let runTimeOut;
   let runNextAuto;
-  const timeRunning = 3000;
   const timeAutoNext = 4000;
   let isTransitioning = false;
 
-  const resetTimer = () => {
-    clearTimeout(runNextAuto);
-    runNextAuto = setTimeout(() => {
-      if (nextRef.current) nextRef.current.click();
-    }, timeAutoNext);
+  const adjustContentHeight = () => {
+    if (!sliderRef.current) return;
+    const activeSlide = sliderRef.current.querySelector(".item");
+    if (activeSlide) {
+      const content = activeSlide.querySelector(`.${styles.content}`);
+      if (content) {
+        sliderRef.current.style.height = `${content.scrollHeight}px`;
+      }
+    }
   };
 
   const showSlider = (type) => {
@@ -48,49 +48,38 @@ const HeroSlider = () => {
 
     const slider = sliderRef.current;
     const thumbnail = thumbnailRef.current;
-    const carousel = carouselRef.current;
     const sliderItems = slider.querySelectorAll(".item");
     const thumbnailItems = thumbnail.querySelectorAll(".item");
 
     if (type === "next") {
       slider.appendChild(sliderItems[0]);
       thumbnail.appendChild(thumbnailItems[0]);
-      carousel.classList.add(styles.next);
     } else {
       slider.prepend(sliderItems[sliderItems.length - 1]);
       thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1]);
-      carousel.classList.add(styles.prev);
     }
 
-    // Update active thumbnail
-    thumbnailItems.forEach((item) => item.classList.remove(styles.active));
-    thumbnailItems[0].classList.add(styles.active);
-
-    clearTimeout(runTimeOut);
-    runTimeOut = setTimeout(() => {
-      carousel.classList.remove(styles.next);
-      carousel.classList.remove(styles.prev);
+    setTimeout(() => {
       isTransitioning = false;
-      resetTimer();
-    }, timeRunning);
+      adjustContentHeight();
+    }, 500);
   };
 
   useEffect(() => {
-    const nextButton = nextRef.current;
-    const prevButton = prevRef.current;
+    adjustContentHeight();
+    const observer = new MutationObserver(() => adjustContentHeight());
+    observer.observe(sliderRef.current, { childList: true });
 
-    const handleNext = () => showSlider("next");
-    const handlePrev = () => showSlider("prev");
+    if (nextRef.current) nextRef.current.addEventListener("click", () => showSlider("next"));
+    if (prevRef.current) prevRef.current.addEventListener("click", () => showSlider("prev"));
 
-    if (nextButton) nextButton.addEventListener("click", handleNext);
-    if (prevButton) prevButton.addEventListener("click", handlePrev);
-
-    resetTimer();
+    runNextAuto = setInterval(() => {
+      if (nextRef.current) nextRef.current.click();
+    }, timeAutoNext);
 
     return () => {
-      if (nextButton) nextButton.removeEventListener("click", handleNext);
-      if (prevButton) prevButton.removeEventListener("click", handlePrev);
-      clearTimeout(runNextAuto);
+      observer.disconnect();
+      clearInterval(runNextAuto);
     };
   }, []);
 
@@ -101,7 +90,6 @@ const HeroSlider = () => {
           <div key={i} className={`item ${styles.item}`}>
             <img src={`/images/slide-${i}.jpg`} alt={`Slide ${i}`} />
             <div className={styles.content}>
-              {/* Show only the corresponding heading, subheading, and button */}
               <div className={styles.title}>{headingarr[index]}</div>
               <div className={styles.des}>{subheadarr[index]}</div>
               <div className={styles.buttons}>
@@ -113,10 +101,9 @@ const HeroSlider = () => {
       </div>
 
       <div className={styles.thumbnail} ref={thumbnailRef}>
-        {thumbsarr.map((i, index) => (
+        {imgarr.map((i, index) => (
           <div key={i} className={`item ${styles.item} ${index === 0 ? styles.active : ""}`}>
             <img src={`/images/slide-${i}.jpg`} alt={`Thumbnail ${i}`} />
-            
           </div>
         ))}
       </div>
@@ -125,13 +112,201 @@ const HeroSlider = () => {
         <button id="prev" ref={prevRef}>{"<"}</button>
         <button id="next" ref={nextRef}>{">"}</button>
       </div>
-
-      <div className={styles.time} ref={timeRef}></div>
     </div>
   );
 };
 
 export default HeroSlider;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import { useEffect, useRef } from "react";
+// import styles from "./heroslider.module.css";
+
+// const HeroSlider = () => {
+//   const sliderRef = useRef(null);
+//   const thumbnailRef = useRef(null);
+//   const carouselRef = useRef(null);
+//   const nextRef = useRef(null);
+//   const prevRef = useRef(null);
+//   const timeRef = useRef(null);
+
+//   const imgarr = [1, 2, 3, 4];
+//   const thumbsarr = [1, 2, 3, 4];
+//   const headingarr = [
+//     "Moments That Last a Lifetime",
+//     "Pre-Wedding Magic",
+//     "Destination Weddings, Perfectly Framed",
+//     "Cinematic Storytelling",
+//   ];
+//   const subheadarr = [
+//     "Experience wedding photography that captures not just faces but emotions, turning your love story into timeless memories.",
+//     "From scenic landscapes to intimate moments, we bring your pre-wedding dreams to life with breathtaking photography.",
+//     "Whether it’s the beaches of Maldives or the palaces of Jaipur, we travel with you to capture your most cherished moments.",
+//     "Relive your wedding with our cinematic videography, where every detail is beautifully preserved.",
+//   ];
+//   const btntextarr = ["View Our Work", "Explore Pre-Wedding", "Discover Destinations", "Watch Our Films"];
+
+//   let runTimeOut;
+//   let runNextAuto;
+//   const timeRunning = 3000;
+//   const timeAutoNext = 4000;
+//   let isTransitioning = false;
+
+//   const resetTimer = () => {
+//     clearTimeout(runNextAuto);
+//     runNextAuto = setTimeout(() => {
+//       if (nextRef.current) nextRef.current.click();
+//     }, timeAutoNext);
+//   };
+
+//   const showSlider = (type) => {
+//     if (isTransitioning) return;
+//     isTransitioning = true;
+
+//     if (!sliderRef.current || !thumbnailRef.current || !carouselRef.current) return;
+
+//     const slider = sliderRef.current;
+//     const thumbnail = thumbnailRef.current;
+//     const carousel = carouselRef.current;
+//     const sliderItems = slider.querySelectorAll(".item");
+//     const thumbnailItems = thumbnail.querySelectorAll(".item");
+
+//     if (type === "next") {
+//       slider.appendChild(sliderItems[0]);
+//       thumbnail.appendChild(thumbnailItems[0]);
+//       carousel.classList.add(styles.next);
+//     } else {
+//       slider.prepend(sliderItems[sliderItems.length - 1]);
+//       thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1]);
+//       carousel.classList.add(styles.prev);
+//     }
+
+//     // Update active thumbnail
+//     thumbnailItems.forEach((item) => item.classList.remove(styles.active));
+//     thumbnailItems[0].classList.add(styles.active);
+
+//     clearTimeout(runTimeOut);
+//     runTimeOut = setTimeout(() => {
+//       carousel.classList.remove(styles.next);
+//       carousel.classList.remove(styles.prev);
+//       isTransitioning = false;
+//       resetTimer();
+//     }, timeRunning);
+//   };
+
+//   useEffect(() => {
+//     const nextButton = nextRef.current;
+//     const prevButton = prevRef.current;
+
+//     const handleNext = () => showSlider("next");
+//     const handlePrev = () => showSlider("prev");
+
+//     if (nextButton) nextButton.addEventListener("click", handleNext);
+//     if (prevButton) prevButton.addEventListener("click", handlePrev);
+
+//     resetTimer();
+
+//     return () => {
+//       if (nextButton) nextButton.removeEventListener("click", handleNext);
+//       if (prevButton) prevButton.removeEventListener("click", handlePrev);
+//       clearTimeout(runNextAuto);
+//     };
+//   }, []);
+
+//   return (
+//     <div className={styles.carousel} ref={carouselRef}>
+//       <div className={styles.list} ref={sliderRef}>
+//         {imgarr.map((i, index) => (
+//           <div key={i} className={`item ${styles.item}`}>
+//             <img src={`/images/slide-${i}.jpg`} alt={`Slide ${i}`} />
+//             <div className={styles.content}>
+//               {/* Show only the corresponding heading, subheading, and button */}
+//               <div className={styles.title}>{headingarr[index]}</div>
+//               <div className={styles.des}>{subheadarr[index]}</div>
+//               <div className={styles.buttons}>
+//                 <button>{btntextarr[index]}</button>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+
+//       <div className={styles.thumbnail} ref={thumbnailRef}>
+//         {thumbsarr.map((i, index) => (
+//           <div key={i} className={`item ${styles.item} ${index === 0 ? styles.active : ""}`}>
+//             <img src={`/images/slide-${i}.jpg`} alt={`Thumbnail ${i}`} />
+            
+//           </div>
+//         ))}
+//       </div>
+
+//       <div className={styles.arrows}>
+//         <button id="prev" ref={prevRef}>{"<"}</button>
+//         <button id="next" ref={nextRef}>{">"}</button>
+//       </div>
+
+//       <div className={styles.time} ref={timeRef}></div>
+//     </div>
+//   );
+// };
+
+// export default HeroSlider;
 
 
 

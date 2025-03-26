@@ -24,8 +24,8 @@ export default function Index() {
     const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
 
     // Control text & button visibility (Appear when scale is near 3.5 - 4)
-    const textOpacity = useTransform(scale4, [3.5, 4], [0, 1]); 
-    const textVisibility = useTransform(scale4, [3.5, 3.6], ['hidden', 'visible']);
+    const textOpacity = useTransform(scale4, [2.5, 3], [0, 1]); 
+    const textVisibility = useTransform(scale4, [2.5, 2.8], ['hidden', 'visible']);
 
     const pictures = [
         {
@@ -74,7 +74,7 @@ export default function Index() {
                                 >
                                     <h1>A Glimpse of Love & Celebration</h1>
                                     <h2>Dive into our extensive gallery and experience the magic we create with every shot. From candid moments to stunning portraits, witness the beauty of weddings through our lens.</h2>
-                                    <button>Explore More</button>
+                                    <button>View Gallery</button>
                                 </motion.div>
                             )}
                         </div>
