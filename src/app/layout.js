@@ -2,10 +2,12 @@ import './globals.css'
 import { Ledger ,Old_Standard_TT } from 'next/font/google'
 import Header from '../components/header';
 import FooterWeb from '../components/FooterWeb/FooterWeb';
+import WhatsAppButton from '../components/WhatsappBtn/Whatsappbtn';
 
 
 const ledger = Ledger({ weight: '400', subsets: ['latin'] });
 const oldStandardTT = Old_Standard_TT({ weight: ['400', '700'], subsets: ['latin'] });
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -18,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={`${ledger.className} ${oldStandardTT.className}`}>
         <Header />
         {children}
+        <WhatsAppButton/>
         <FooterWeb/>
       </body>
     </html>

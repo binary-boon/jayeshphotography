@@ -11,23 +11,23 @@ const links = [
   {
     title: "Home",
     href: "/",
-    src: "home.png"
+    src: "4.jpg"
   },
   {
     title: "About",
     href: "/shop",
-    src: "1.jpg"
+    src: "about.jpg"
   },
   
   {
     title: "Gallery",
     href: "/lgGallery",
-    src: "4.png"
+    src: "3.jpg"
   },
   {
     title: "Contact",
     href: "/Contact",
-    src: "contact.png"
+    src: "7.jpg"
   }
 ]
 

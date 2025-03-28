@@ -20,6 +20,20 @@ const HeroSlider = () => {
   const timeAutoNext = 7000;
   let isTransitioning = false;
 
+  const headingarr = [
+    "Moments That Last a Lifetime",
+    "Pre-Wedding Magic",
+    "Destination Weddings, Perfectly Framed",
+    "Cinematic Storytelling",
+  ];
+  const subheadarr = [
+    "Experience wedding photography that captures emotions, \n turning your love story into timeless memories.",
+    "From scenic landscapes to intimate moments,   we bring your pre-wedding dreams to life with breathtaking photography.",
+    "Whether it’s the beaches of Maldives or the palaces of Jaipur, we travel with you to capture your most cherished moments.",
+    "Relive your wedding with our cinematic videography, where every detail is beautifully preserved.",
+  ];
+  const btntextarr = ["View Our Work", "Explore Pre-Wedding", "Discover Destinations", "Watch Our Films"];
+
   const resetTimer = () => {
     clearTimeout(runNextAuto);
     runNextAuto = setTimeout(() => {
@@ -84,18 +98,25 @@ const HeroSlider = () => {
   return (
     <div className={styles.carousel} ref={carouselRef}>
       <div className={styles.list} ref={sliderRef}>
-        {imgarr.map((i) => (
+        {imgarr.map((i,index) => (
           <div key={i} className={`item ${styles.item}`}>
             <img src={`/images/slide-${i}.jpg`} alt={`Slide ${i}`} />
             <div className={styles.content}>
-              <div className={styles.author}>Wedding Photography</div>
-              <div className={styles.title}>Landscape Vibe</div>
-              <div className={styles.topic}>Photo</div>
-              <div className={styles.des}>Lorem ipsum dolor sit amet...</div>
-              <div className={styles.buttons}>
-                <button>SEE MORE</button>
-                <button>SUBSCRIBE</button>
-              </div>
+              
+              <div className={styles.title}>{headingarr[index]}</div>
+              
+              <div className={styles.description}>
+            {subheadarr[index].split(',').map((part, i) => (
+              <span key={i}>
+                {part}
+                {i !== subheadarr[index].split(',').length - 1 && <br />}
+              </span>
+            ))}
+          </div>
+              
+                
+                <button>{btntextarr[index]}</button>
+              
             </div>
           </div>
         ))}
@@ -105,10 +126,10 @@ const HeroSlider = () => {
         {thumbsarr.map((i, index) => (
           <div key={i} className={`item ${styles.item} ${index === 0 ? styles.active : ""}`}>
             <img src={`/images/slide-${i}.jpg`} alt={`Thumbnail ${i}`} />
-            <div className={styles.content}>
+            {/* <div className={styles.content}>
               <div className={styles.title}>{`Name Slider ${i}`}</div>
               <div className={styles.description}>Description</div>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
