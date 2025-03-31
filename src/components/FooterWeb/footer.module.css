@@ -4,7 +4,8 @@
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
-    background-color: aqua;
+    background-color: blue;
+    
 }
 
 .links{
@@ -18,4 +19,39 @@
 .socialIcons{
     display: flex;
     justify-content: space-around;
+}
+
+.footerBrand{
+    display: flex;
+    justify-content: space-between;
+    justify-items: end;
+
+    
+}
+
+@media screen and (max-width:768px) {
+    .footerBrand{
+        flex-direction: column;
+
+    }
+
+    .footerHeader{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .copyright{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .developerLink{
+        text-align: center;
+        text-decoration: none;
+        color: gray;        
+    }
+
+    .linkscontainer{
+        margin-bottom: 10%;
+    }
 }
