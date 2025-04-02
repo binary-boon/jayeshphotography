@@ -27,12 +27,16 @@ const HeroSlider = () => {
     "Cinematic Storytelling",
   ];
   const subheadarr = [
-    "Experience wedding photography that captures emotions,  turning your love story into timeless memories.",
-    "From scenic landscapes to intimate moments,   we bring your pre-wedding dreams to life with breathtaking photography.",
-    "Whether it’s the beaches of Maldives or the palaces of Jaipur, we travel with you to capture your most cherished moments.",
-    "Relive your wedding with our cinematic videography, where every detail is beautifully preserved.",
+    "Experience wedding photography that captures emotions.",
+    "we bring your pre-wedding dreams to life with breathtaking photography.",
+    "we travel with you to capture your most cherished moments.",
+    "where every detail is beautifully preserved.",
   ];
-  const btntextarr = ["View Our Work", "Explore Pre-Wedding", "Discover Destinations", "Watch Our Films"];
+  const btntextarr = ["View Our Work", "Contact US", "Discover Destinations", "Watch Our Films"];
+
+  const btnlinksarr =["/MasonGalleryMain","/","/SocialMediaGallery", "https://www.youtube.com/@JayeshPhotography"]
+
+ 
 
   const resetTimer = () => {
     clearTimeout(runNextAuto);
@@ -115,7 +119,7 @@ const HeroSlider = () => {
           </div>
               
                 
-                <button>{btntextarr[index]}</button>
+                <button><a href={btnlinksarr[index]}>{btntextarr[index]}</a></button>
               
             </div>
           </div>

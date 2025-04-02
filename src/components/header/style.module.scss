@@ -1,7 +1,7 @@
 .header{
     background-color: #141414;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     padding: 10px;
     z-index: 500;
@@ -33,7 +33,7 @@
     .bar{
         display: flex;
         
-        
+        padding-right: 5%;
         justify-content:flex-end;
         text-transform: uppercase;
         font-size: 12px;
