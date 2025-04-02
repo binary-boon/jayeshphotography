@@ -21,8 +21,13 @@ const links = [
   
   {
     title: "Gallery",
-    href: "/lgGallery",
+    href: "/MasonGalleryMain",
     src: "3.jpg"
+  },
+  {
+    title: "Socials",
+    href: "/SocialMediaGallery",
+    src: "4.jpg"
   },
   {
     title: "Contact",

@@ -140,6 +140,7 @@ header a {
 
 .thumbnail .item .content .description {
   font-weight: 300;
+  flex-direction: column;
   
 
 }

@@ -27,7 +27,7 @@ const HeroSlider = () => {
     "Cinematic Storytelling",
   ];
   const subheadarr = [
-    "Experience wedding photography that captures emotions, \n turning your love story into timeless memories.",
+    "Experience wedding photography that captures emotions,  turning your love story into timeless memories.",
     "From scenic landscapes to intimate moments,   we bring your pre-wedding dreams to life with breathtaking photography.",
     "Whether it’s the beaches of Maldives or the palaces of Jaipur, we travel with you to capture your most cherished moments.",
     "Relive your wedding with our cinematic videography, where every detail is beautifully preserved.",
