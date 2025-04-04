@@ -13,6 +13,14 @@
   height: 100%;
 } */
 
+
+.button {
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  padding: 20px;
+  font-weight: bolder;
+}
 .parallaxBackground {
   position: absolute; 
   top: 0;

@@ -90,6 +90,13 @@
     transition: opacity 0.3s ease-in-out;
     z-index: 10; // Ensure it's above other elements
     pointer-events: auto; // Make sure it receives click events
+    max-width: 90%;
+}
+
+.mobileOverlay {
+    top: 50%; // Position more centered for mobile
+    max-width: 85%;
+    padding: 0.75rem 1rem;
 }
 
 .overlayText h2{
@@ -104,10 +111,8 @@
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
-     /* Adjust as needed */
-     margin-top: 5%;
+    margin-top: 5%;
 }
-
 
 .galleryButton {
     appearance: none;
@@ -123,7 +128,6 @@
     text-decoration: none;
     cursor: pointer !important;
     font-family: inherit;
-    
     z-index: 20; // Higher z-index to ensure it's clickable
     pointer-events: auto !important; // Force pointer events to be recognized
     
@@ -140,6 +144,208 @@
         background-color: #e0e0e0;
     }
 }
+
+/* Media queries for better mobile responsiveness */
+@media (max-width: 768px) {
+    .overlayText {
+        padding: 0.75rem 1rem;
+        
+        h1 {
+            font-size: 0.7rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-size: 0.45rem;
+        }
+    }
+    
+    .galleryButton {
+        font-size: 1.5rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlayText {
+        padding: 0.5rem 0.75rem;
+        
+        h1 {
+            font-size: 0.65rem;
+            margin-bottom: 0.4rem;
+        }
+        
+        h2 {
+            font-size: 0.4rem;
+        }
+    }
+    
+    .galleryButton {
+        font-size: 1.25rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // styles.module.scss
+// .container{
+//     height: 300vh;
+//     position: relative;
+//     background-color: black;
+//     .sticky{
+//         position: sticky;
+//         overflow: hidden;
+//         top: 0;
+//         height: 100vh;
+
+//         .el{
+//             width: 100%;
+//             height: 100%;
+//             top: 0;
+//             position: absolute;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             .imageContainer{
+//                 position: relative;
+//                 width: 25vw;
+//                 height: 25vh;
+//                 img{
+//                     object-fit: cover;
+//                 }
+//             }
+//             &:nth-of-type(2){
+//                 .imageContainer{
+//                     top: -30vh;
+//                     left: 5vw;
+//                     width: 35vw;
+//                     height: 30vh;
+//                 }
+//             }
+//             &:nth-of-type(3){
+//                 .imageContainer{
+//                     top: -10vh;
+//                     left: -25vw;
+//                     width: 20vw;
+//                     height: 45vh;
+//                 }
+//             }
+//             &:nth-of-type(4){
+//                 .imageContainer{
+//                     left: 27.5vw;
+//                     width: 25vw;
+//                     height: 25vh;
+//                 }
+//             }
+//             &:nth-of-type(5){
+//                 .imageContainer{
+//                     top: 27.5vh;
+//                     left: 5vw;
+//                     width: 20vw;
+//                     height: 25vh;
+//                 }
+//             }
+//             &:nth-of-type(6){
+//                 .imageContainer{
+//                     top: 27.5vh;
+//                     left: -22.5vw;
+//                     width: 30vw;
+//                     height: 25vh;
+//                 }
+//             }
+//             &:nth-of-type(7){
+//                 .imageContainer{
+//                     top: 22.5vh;
+//                     left: 25vw;
+//                     width: 15vw;
+//                     height: 15vh;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .overlayText {
+//     position: absolute;
+//     top: 40%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     text-align: center;
+//     color: white;
+//     font-size: 1rem;
+//     background: rgba(0, 0, 0, 0.5);
+//     padding: 1rem 2rem;
+//     border-radius: 8px;
+//     transition: opacity 0.3s ease-in-out;
+//     z-index: 10; // Ensure it's above other elements
+//     pointer-events: auto; // Make sure it receives click events
+// }
+
+// .overlayText h2{
+//     font-size: 0.5rem;
+// }
+
+// .overlayText h1{
+//     font-size: 0.75rem;
+// }
+
+// .btndiv {
+//     display: flex;
+//     justify-content: center; /* Centers horizontally */
+//     align-items: center; /* Centers vertically */
+//      /* Adjust as needed */
+//      margin-top: 5%;
+// }
+
+
+// .galleryButton {
+//     appearance: none;
+//     display: inline-block;
+//     font-size: 2rem;
+//     background-color: white;
+//     color: black;
+//     align-items: center;
+//     padding: 0.5rem 1rem;
+//     border-radius: 4px;
+//     margin-top: 0.5rem;
+//     border: none;
+//     text-decoration: none;
+//     cursor: pointer !important;
+//     font-family: inherit;
+    
+//     z-index: 20; // Higher z-index to ensure it's clickable
+//     pointer-events: auto !important; // Force pointer events to be recognized
+    
+//     &:hover {
+//         background-color: #f0f0f0;
+//     }
+    
+//     &:focus {
+//         outline: 2px solid #007bff;
+//         outline-offset: 2px;
+//     }
+    
+//     &:active {
+//         background-color: #e0e0e0;
+//     }
+// }
 
 
 
