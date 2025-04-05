@@ -59,7 +59,7 @@ header a {
   width: 80%;
   max-width: 80%;
 
-  left: 48%;
+  left: 58%;
   transform: translateX(-50%);
   padding-right: 30%;
   color: #fff;
@@ -280,8 +280,10 @@ header a {
 @media screen and (max-width: 678px) {
   .carousel .list .item .content {
     padding-right: 0;
-
+    left: 48%;
   }
+
+  
   .carousel .list .item .title {
     font-size: 30px;
   }
