@@ -59,7 +59,7 @@ header a {
   width: 80%;
   max-width: 80%;
 
-  left: 58%;
+  left: 48%;
   transform: translateX(-50%);
   padding-right: 30%;
   color: #fff;
@@ -84,7 +84,10 @@ header a {
   line-height: 1.3em;
   margin-bottom: 0.5ch;
   background-color: #000;
-  width: max-content; 
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 2px;
+  width: fit-content; 
 }
 
 .carousel .list .item .topic {

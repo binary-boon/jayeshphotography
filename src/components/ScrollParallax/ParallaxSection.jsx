@@ -40,7 +40,7 @@ const ParallaxSection = () => {
           <p className={styles.paragraph}>
           Whether it's an intimate wedding or a grand celebration, we’d love to be a part of your journey. Let’s talk and bring your dream wedding to life.
           </p>
-          <button className={styles.button}>Contact Us</button>
+          <a href='/Contact' className={styles.button}>Contact Us</a>
         </div>
 
         {/* Dark Overlay */}

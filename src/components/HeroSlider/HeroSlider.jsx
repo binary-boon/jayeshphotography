@@ -21,10 +21,10 @@ const HeroSlider = () => {
   let isTransitioning = false;
 
   const headingarr = [
-    "Moments That Last a Lifetime",
-    "Pre-Wedding Magic",
-    "Destination Weddings, Perfectly Framed",
-    "Cinematic Storytelling",
+    " Moments That Last a Lifetime ",
+    " Pre-Wedding Magic ",
+    " Destination Weddings, Perfectly Framed ",
+    " Cinematic Storytelling ",
   ];
   const subheadarr = [
     "Experience wedding photography that captures emotions.",

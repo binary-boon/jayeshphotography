@@ -45,7 +45,7 @@ const ServiceSection = () => {
                 
             </div>   
 
-            <div className={Styles.btnDiv}><button className={Styles.btn}>Get Free Consulation!</button></div>
+            <div className={Styles.btnDiv}><a href="/Contact" className={Styles.btn}>Get Free Consulation!</a></div>
         </div>
 
         
