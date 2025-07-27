@@ -1,4 +1,4 @@
-import HeroSlider from "../components/HeroSlider/HeroSlider";
+import VideoSlider from "../components/VideoSlider/VideoSlider";
 import AnimCounter from "../components/NumberTicker/AnimatedCounters"
 import Galleryel from "./gallery"
 import YouTubeChannelVideos from "../components/Youtube/YoutubeChannelVideos";
@@ -7,28 +7,18 @@ import MyParallaxProvider from "../components/ScrollParallax/MyParallaxProvider"
 import AboutUsIntro from "../components/AboutUs/AboutUsIntro";
 import ServiceSection from "../components/ServiceSection/ServiceSection";
 
- function Home() {
+function Home() {
   return (
-    
     <div>
-    <HeroSlider/>
-    <AnimCounter/>
-    <AboutUsIntro/>
-    <ServiceSection/>
-    <Galleryel/>
-
-    <MyParallaxProvider/>
-
-    
-
-    <YouTubeChannelVideos/>
-   
-    <EnvironmentDebug/>
-    
+      <VideoSlider />
+      <AnimCounter/>
+      <AboutUsIntro/>
+      <ServiceSection/>
+      <Galleryel/>
+      <MyParallaxProvider/>
+      <YouTubeChannelVideos/>
+      <EnvironmentDebug/>
     </div>
-    
-    
-
   )
 }
 

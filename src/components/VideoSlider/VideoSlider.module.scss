@@ -1,0 +1,343 @@
+// VideoSlider.module.scss
+
+.heroContainer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoFallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #001514;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(240, 233, 223, 0.2);
+  border-top: 2px solid #63768D;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+.loadingText {
+  color: #63768D;
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.8;
+  animation: pulse 2.5s ease-in-out infinite;
+  letter-spacing: 0.5px;
+}
+
+.videoError {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #001514;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.errorContent {
+  text-align: center;
+  color: #63768D;
+  z-index: 2;
+  
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    color: #F0E9DF;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-weight: 300;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+.videoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.backgroundVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 21, 20, 0.6) 0%,
+    rgba(0, 21, 20, 0.3) 50%,
+    rgba(0, 21, 20, 0.7) 100%
+  );
+  z-index: -1;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  color: white;
+}
+
+.textContainer {
+  margin-bottom: 3rem;
+  backdrop-filter: blur(20px) saturate(120%);
+  background: rgba(0, 21, 20, 0.75);
+  border: 1px solid rgba(240, 233, 223, 0.15);
+  border-radius: 2px;
+  padding: 4rem 3rem;
+  box-shadow: 
+    0 20px 60px rgba(0, 21, 20, 0.8),
+    inset 0 1px 0 rgba(240, 233, 223, 0.1);
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+  color: #F0E9DF;
+  text-shadow: none;
+  
+  .titleAccent {
+    color: #E27396;
+    font-weight: 400;
+  }
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: #63768D;
+  max-width: 580px;
+  margin: 0 auto;
+  text-shadow: none;
+}
+
+.ctaContainer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(240, 233, 223, 0.1), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  &:hover::before {
+    left: 100%;
+  }
+}
+
+.primaryBtn {
+  background: #E27396;
+  color: #F0E9DF;
+  border: 1px solid #E27396;
+  
+  &:hover {
+    background: transparent;
+    color: #E27396;
+    border: 1px solid #E27396;
+    transform: translateY(-1px);
+  }
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #F0E9DF;
+  border: 1px solid rgba(240, 233, 223, 0.4);
+  
+  &:hover {
+    background: rgba(240, 233, 223, 0.05);
+    border: 1px solid rgba(240, 233, 223, 0.6);
+    transform: translateY(-1px);
+  }
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  color: rgba(240, 233, 223, 0.6);
+  opacity: 0.8;
+}
+
+.scrollMouse {
+  width: 20px;
+  height: 32px;
+  border: 1px solid rgba(240, 233, 223, 0.4);
+  border-radius: 10px;
+  position: relative;
+  
+  .scrollWheel {
+    width: 2px;
+    height: 6px;
+    background: rgba(240, 233, 223, 0.6);
+    border-radius: 1px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollAnimation 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes scrollAnimation {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 0.2;
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+.scrollText {
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(240, 233, 223, 0.5);
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .contentWrapper {
+    padding: 0 1rem;
+  }
+  
+  .textContainer {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .heroTitle {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+  
+  .heroSubtitle {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+  }
+  
+  .ctaContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.875rem 2rem;
+  }
+  
+  .scrollIndicator {
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .textContainer {
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+  }
+  
+  .heroTitle {
+    margin-bottom: 0.75rem;
+  }
+  
+  .ctaContainer {
+    margin-bottom: 2rem;
+  }
+}

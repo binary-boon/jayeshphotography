@@ -29,17 +29,6 @@ const HeroSlider = () => {
   const timeAutoNext = 4000;
   let isTransitioning = false;
 
-  const adjustContentHeight = () => {
-    if (!sliderRef.current) return;
-    const activeSlide = sliderRef.current.querySelector(".item");
-    if (activeSlide) {
-      const content = activeSlide.querySelector(`.${styles.content}`);
-      if (content) {
-        sliderRef.current.style.height = `${content.scrollHeight}px`;
-      }
-    }
-  };
-
   const showSlider = (type) => {
     if (isTransitioning) return;
     isTransitioning = true;
@@ -61,15 +50,10 @@ const HeroSlider = () => {
 
     setTimeout(() => {
       isTransitioning = false;
-      adjustContentHeight();
     }, 500);
   };
 
   useEffect(() => {
-    adjustContentHeight();
-    const observer = new MutationObserver(() => adjustContentHeight());
-    observer.observe(sliderRef.current, { childList: true });
-
     if (nextRef.current) nextRef.current.addEventListener("click", () => showSlider("next"));
     if (prevRef.current) prevRef.current.addEventListener("click", () => showSlider("prev"));
 
@@ -78,7 +62,6 @@ const HeroSlider = () => {
     }, timeAutoNext);
 
     return () => {
-      observer.disconnect();
       clearInterval(runNextAuto);
     };
   }, []);
