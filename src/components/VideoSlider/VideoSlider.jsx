@@ -199,19 +199,18 @@ const VideoSlider = () => {
               className={styles.heroTitle}
               variants={textVariants}
             >
-              Capturing
-              <span className={styles.titleAccent}> Moments</span>
+              Directed by 
+              <span className={styles.titleAccent}> Love</span>
               <br />
-              Creating
-              <span className={styles.titleAccent}> Memories</span>
+              Captured by
+              <span className={styles.titleAccent}> Us</span>
             </motion.h1>
             
             <motion.p 
               className={styles.heroSubtitle}
               variants={textVariants}
             >
-              Professional photography that tells your unique story through 
-              stunning visuals and artistic vision
+              Bold emotions. Soft light. Real moments. We turn fleeting feelings into forever memories — all guided by your love story.
             </motion.p>
           </motion.div>
 

@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        heading: ['"Abril Fatface"', 'serif'],
+        body: ['"Quattrocento"', 'serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

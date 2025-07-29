@@ -1,7 +1,7 @@
 .container{
     height: 300vh;
     position: relative;
-    background-color: black;
+    background-color: #001514;
     .sticky{
         position: sticky;
         overflow: hidden;
@@ -83,24 +83,38 @@
     text-align: center;
     color: white;
     font-size: 1rem;
-    background: rgba(0, 0, 0, 0.5);
+    
     padding: 1rem 2rem;
-    border-radius: 8px;
+    
+    backdrop-filter: blur(20px) saturate(120%);
+  background: rgba(0, 21, 20, 0.75);
+  border: 1px solid rgba(240, 233, 223, 0.15);
     transition: opacity 0.3s ease-in-out;
 }
 
 .overlayText h2{
-    font-size: 0.5rem;
+    font-size: 0.4rem;
+    font-family: 'Quattrocento', serif;
+    font-weight: 200;
 }
 
 .overlayText h1{
-    font-size: 0.75rem;
+    font-size: 0.6rem;
+    font-family: 'Abril Fatface', serif;
 }
 
 .overlayText button{
-    font-size: .5rem;
-    border: none;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    background: #E27396;
+  color: #F0E9DF;
+  font-family: 'Abril Fatface', serif;
+  border: 1px solid #E27396;
+  font-size: 0.5rem;
+  
+  &:hover {
+    background: transparent;
+    color: #E27396;
+    border: 1px solid #E27396;
+    transform: translateY(-1px);
+  }
 }
 

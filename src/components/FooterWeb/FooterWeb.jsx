@@ -4,7 +4,7 @@ import Content from './FooterContent';
 export default function FooterWeb() {
   return (
     <div 
-        className='relative h-[800px] bg-[#ffffff]'
+        className='relative h-[800px] bg-[#F0E9DF]'
         style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
     >
         <div className='relative h-[calc(100vh+800px)] -top-[100vh]'>

@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
-    background-color: aqua;
+    
 }
 
 .links{
@@ -12,6 +12,7 @@
     flex-direction: row;
     font-size: x-large;
     font-weight: bolder;
+    font-family: 'Quattrocento', serif;
     justify-content: space-around;
 }
 
@@ -19,3 +20,4 @@
     display: flex;
     justify-content: space-around;
 }
+

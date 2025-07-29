@@ -65,6 +65,7 @@
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     font-weight: 400;
+
     color: #F0E9DF;
   }
   
@@ -152,6 +153,7 @@
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 2rem;
+  font-family: 'Abril Fatface', serif;
   letter-spacing: -0.01em;
   color: #F0E9DF;
   text-shadow: none;
@@ -166,7 +168,8 @@
   font-size: clamp(1rem, 2.2vw, 1.3rem);
   font-weight: 300;
   line-height: 1.7;
-  color: #63768D;
+  color: #F0E9DF;
+  font-family: 'Quattrocento', serif;
   max-width: 580px;
   margin: 0 auto;
   text-shadow: none;
@@ -188,6 +191,7 @@
   border-radius: 0;
   border: none;
   cursor: pointer;
+  font-family: 'Abril Fatface', serif;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -214,6 +218,7 @@
 .primaryBtn {
   background: #E27396;
   color: #F0E9DF;
+  font-family: 'Abril Fatface', serif;
   border: 1px solid #E27396;
   
   &:hover {
@@ -227,6 +232,7 @@
 .secondaryBtn {
   background: transparent;
   color: #F0E9DF;
+  font-family: 'Abril Fatface', serif;
   border: 1px solid rgba(240, 233, 223, 0.4);
   
   &:hover {

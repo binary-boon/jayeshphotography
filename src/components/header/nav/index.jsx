@@ -15,7 +15,7 @@ const links = [
   },
   {
     title: "About",
-    href: "/shop",
+    href: "/About",
     src: "about.jpg"
   },
   

@@ -51,7 +51,10 @@ export default function YouTubeVideos() {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>Latest Videos</h2>
+      <div className={styles.textdiv}>
+      <h1 className={styles.heading}>Stories in Motion</h1>
+      <h2 className={styles.subheading}>Step into the world we create for our couples — a blend of artistry, emotion, and storytelling. Watch our curated films and feel the magic unfold frame by frame.</h2>
+      </div>
       <div className={styles.grid}>
         {videos.map((video) => (
           <div key={video.id.videoId} className={styles.videoCard}>
@@ -68,6 +71,7 @@ export default function YouTubeVideos() {
           </div>
         ))}
       </div>
+      <div className='justify-center' ><button className={styles.buttondiv}>Visit our Social Media</button></div>
     </div>
   );
 }

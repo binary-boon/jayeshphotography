@@ -17,7 +17,8 @@ function Home() {
       <Galleryel/>
       <MyParallaxProvider/>
       <YouTubeChannelVideos/>
-      <EnvironmentDebug/>
+      
+      
     </div>
   )
 }
