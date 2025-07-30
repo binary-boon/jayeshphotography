@@ -4,30 +4,35 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { height } from '../anim';
 import Body from './Body';
-import Footer from './Footer';
+// import Footer from './Footer';
 import Image from './Image';
 
 const links = [
   {
     title: "Home",
     href: "/",
-    src: "home.png"
+    src: "1.jpg"
   },
   {
     title: "About",
-    href: "/About",
+    href: "/AboutUS",
     src: "about.jpg"
   },
   
   {
     title: "Gallery",
     href: "/lgGallery",
-    src: "3-sm-jpg"
+    src: "2.jpg"
+  },
+  {
+    title: "Socials",
+    href: "/SocialMediaGallery",
+    src: "3.jpg"
   },
   {
     title: "Contact",
     href: "/Contact",
-    src: "7-sm.jpg.png"
+    src: "4.jpg"
   }
 ]
 

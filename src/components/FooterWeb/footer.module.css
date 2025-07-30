@@ -1,13 +1,26 @@
-.linkscontainer{
+/* Footer Container */
+.footerContainer {
+    background-color: #F0E9DF;
+    padding: 2rem 3rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    
+}
+
+/* Existing styles */
+.linkscontainer {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
-    
 }
 
-.links{
+.links {
     display: flex;
     flex-direction: row;
     font-size: x-large;
@@ -16,8 +29,108 @@
     justify-content: space-around;
 }
 
-.socialIcons{
+.socialIcons {
     display: flex;
     justify-content: space-around;
 }
 
+/* Navigation Links - Remove underlines and add hover effects */
+.navLink {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.navLink:hover {
+    opacity: 0.7;
+}
+
+.navLink p,
+.navLink h3 {
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Social Links */
+.socialLink {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.socialLink:hover {
+    opacity: 0.7;
+}
+
+/* Section 2 styling */
+.section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.brandName {
+    font-size: 9vw;
+    line-height: 0.8;
+    margin-top: 2.5rem;
+    font-family: 'Quattrocento', serif;
+    margin: 0;
+}
+
+/* Business Locations */
+.businessLocations {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.locationCard {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.locationTitle {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Quattrocento', serif;
+    margin-top: 0;
+}
+
+.locationAddress {
+    color: #374151;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .businessLocations {
+        grid-template-columns: 1fr;
+    }
+    
+    .footerContainer {
+        padding: 1.5rem 2rem;
+    }
+    
+    .brandName {
+        font-size: 12vw;
+        color: #001514;
+    }
+    
+    .links {
+        font-size: large;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .linkscontainer {
+        height: auto;
+        gap: 2rem;
+    }
+}
