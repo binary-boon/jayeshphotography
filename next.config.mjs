@@ -5,13 +5,13 @@ const nextConfig = {
   // Enable SWC minification for better performance
   swcMinify: true,
   
-  // Optimize images and videos
+  // Optimize images
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   },
 
-  // Environment variables (keep your existing ones + add new ones)
+  // Environment variables
   env: {
     NEXT_PUBLIC_YOUTUBE_CHANNEL_NAME: process.env.NEXT_PUBLIC_YOUTUBE_CHANNEL_NAME,
     NEXT_PUBLIC_YOUTUBE_API_KEY: process.env.NEXT_PUBLIC_YOUTUBE_API_KEY,
@@ -39,7 +39,7 @@ const nextConfig = {
           },
         ],
       },
-      // Enable CORS for video streaming if needed
+      // Enable CORS for API routes
       {
         source: '/api/(.*)',
         headers: [
@@ -60,15 +60,17 @@ const nextConfig = {
     ];
   },
 
-  // Webpack configuration for HLS.js and video optimization
+  // Webpack configuration
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Optimize for video streaming
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      net: false,
-      tls: false,
-    };
+    // Add fallbacks for Node.js modules
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      };
+    }
 
     // Add support for video files
     config.module.rules.push({
@@ -85,9 +87,8 @@ const nextConfig = {
     return config;
   },
 
-  // Experimental features for better performance
+  // Experimental features - removed problematic ones for App Router
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
   },
 
@@ -95,6 +96,9 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+
+  // Ensure App Router is properly configured
+  output: 'standalone',
 };
 
 export default withNextVideo(nextConfig);
