@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from './YouTubeVideos.module.css';
+import styles from './YoutubeVideos.module.css';
 
 const YOUTUBE_API_KEY = 'AIzaSyBH4JDT2kfw3g2nQ_SOkZjc2gXqt2KtBZc'; // Replace with your API key
 const CHANNEL_NAME = '@jayesh_photography'; // Replace with your desired channel name
