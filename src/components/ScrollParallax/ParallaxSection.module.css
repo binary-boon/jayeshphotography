@@ -19,6 +19,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
 }
 
 .overlay {
@@ -42,7 +43,7 @@
   padding: 80px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  font-family: 'Quattrocento', serif;
+  font-family: 'Moniqa-Paragraph', serif;
   color: white;
 }
 
@@ -56,23 +57,25 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   margin-bottom: 20px;
-  font-family: 'Abril Fatface', serif;
+  font-family: 'Moniqa-Heading', seif;
   background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: -0.02em;
+  font-size: 5rem;
+ 
   line-height: 1.2;
 }
 
 .subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: clamp(2rem,2.5vw, 1.25rem);
   color: rgba(255, 255, 255, 0.8);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
-  font-weight: 300;
+  font-family: 'Moniqa-Heading', serif;
 }
+
 
 /* Testimonials Grid */
 .testimonialsGrid {
@@ -117,7 +120,7 @@
 
 .cardContent {
   position: relative;
-  font-family: 'Quattrocento', serif;
+  font-family: 'Moniqa-Paragraph', serif;
   z-index: 1;
 }
 
@@ -145,23 +148,26 @@
 
 /* Testimonial Text */
 .testimonialText {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.08rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 25px;
-  font-family: 'Quattrocento', serif;
+  font-family: 'Moniqa-Paragraph', serif;
+  
   text-align: center;
 }
 
 /* Client Info */
 .clientInfo {
   text-align: center;
+  font-family: 'Moniqa-Heading', serif;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
 }
 
 .clientName {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: white;
   margin-bottom: 5px;
@@ -189,16 +195,16 @@
 .cta {
   text-align: center;
   margin-top: 40px;
+  font-size: 2rem;
 }
-
 .button {
   background: linear-gradient(135deg, #e20c89 0%, #fae6a7 100%);
   color: black;
   border: none;
-  padding: 15px 40px;
-  font-family: 'Abril Fatface', serif;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 18px 50px;
+  font-family: 'Moniqa-Heading', serif;
+  font-size: clamp(1.5rem, 2vw, 2rem); /* <-- key change */
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -206,6 +212,7 @@
   position: relative;
   overflow: hidden;
 }
+
 
 .button::before {
   content: '';

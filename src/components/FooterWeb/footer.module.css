@@ -1,6 +1,6 @@
 /* Footer Container */
 .footerContainer {
-    background-color: #F0E9DF;
+    background-color: #F7F8FA;
     padding: 2rem 3rem;
     height: 100%;
     width: 100%;
@@ -23,14 +23,16 @@
 .links {
     display: flex;
     flex-direction: row;
-    font-size: x-large;
+    font-size: 2rem;
     font-weight: bolder;
-    font-family: 'Quattrocento', serif;
+    color: #001514;
+    font-family: 'Moniqa-Heading', serif;
     justify-content: space-around;
 }
 
 .socialIcons {
     display: flex;
+    color: #001514;
     justify-content: space-around;
 }
 
@@ -75,7 +77,8 @@
     font-size: 9vw;
     line-height: 0.8;
     margin-top: 2.5rem;
-    font-family: 'Quattrocento', serif;
+    color: #001514;
+    font-family: 'Moniqa-Heading', serif;
     margin: 0;
 }
 

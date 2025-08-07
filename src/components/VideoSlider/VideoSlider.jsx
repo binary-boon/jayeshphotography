@@ -285,11 +285,11 @@ const VideoSlider = () => {
               className={styles.heroTitle}
               variants={textVariants}
             >
-              Directed by 
-              <span className={styles.titleAccent}> Love</span>
+              DIRECTED BY 
+              <span className={styles.titleAccent}> LOVE</span>
               <br />
-              Captured by
-              <span className={styles.titleAccent}> Us</span>
+              CAPTURED BY
+              <span className={styles.titleAccent}> US</span>
             </motion.h1>
             
             <motion.p 

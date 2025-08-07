@@ -149,7 +149,7 @@ export default function AnimatedCounters() {
     <section className={styles.section}>
       <div className={styles.bg}>
         <h2 className={styles.h2}>
-          Our Photography Achievements
+          Achievements
         </h2>
         <div className={styles.flexDiv}>
           {counters.map((item, index) => (

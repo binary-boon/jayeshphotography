@@ -1,7 +1,7 @@
 .container{
     height: 300vh;
     position: relative;
-    background-color: #001514;
+    background-color: #F7F8FA;
     .sticky{
         position: sticky;
         overflow: hidden;
@@ -82,38 +82,45 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    font-size: 1rem;
     
-    padding: 1rem 2rem;
+    
+    padding: 0.5rem 0.8rem;
+    
     
     backdrop-filter: blur(20px) saturate(120%);
-  background: rgba(0, 21, 20, 0.75);
+  background: rgba(255, 255, 255, 0.678);
   border: 1px solid rgba(240, 233, 223, 0.15);
     transition: opacity 0.3s ease-in-out;
 }
 
 .overlayText h2{
-    font-size: 0.4rem;
-    font-family: 'Quattrocento', serif;
-    font-weight: 200;
+    font-size: 0.45rem;
+    font-family: 'Moniqa-Paragraph', serif;
+    line-height: 3ch;
+    letter-spacing: 0.05rem;
+    
+    color: black;
+    
 }
 
 .overlayText h1{
-    font-size: 0.6rem;
-    font-family: 'Abril Fatface', serif;
+    font-size: 1rem;
+    color: #3c211e;
+    font-family: 'Moniqa-Heading', serif;
 }
 
 .overlayText button{
-    background: #E27396;
-  color: #F0E9DF;
-  font-family: 'Abril Fatface', serif;
-  border: 1px solid #E27396;
+    background: #3c211e;
+  color: #ffffff;
+  font-family: 'Moniqa-Heading', serif;
+  
   font-size: 0.5rem;
   
   &:hover {
     background: transparent;
-    color: #E27396;
-    border: 1px solid #E27396;
+    color: #000000;
+    background-color: #000000;
+    
     transform: translateY(-1px);
   }
 }

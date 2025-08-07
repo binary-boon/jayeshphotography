@@ -1,5 +1,5 @@
 .bg{
-    background-color: #001514   ;
+    background-color: #F0E9DF   ;
 }
 
 .container{
@@ -13,44 +13,48 @@
 }
 
 .section{
-    background-color: #001514;
+    background-color: #F0E9DF;
 }
 
 .h2{
-    color: white;
+    color: #191919;
     text-align: center;
-    font-family: 'Abril Fatface', serif;
-    font-size: 3rem;
+    font-family: 'Moniqa-Heading', serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5rem;
+    padding-top: 2ch;
 }
 
 
 .innerDiv{
     display: flex; 
     flex-direction: row;
-    background-color: #001514;
+    background-color: #F0E9DF;
     
     
 }
 
 .text{
 
-    color: white;
+    color: #191919;
     font-size: 2rem;
-    font-family: 'Quattrocento', serif;
+    font-family: 'Moniqa-Heading', serif;
+    font-weight: 300;
 
 }
 
 .number{
-    color: white;
+    color: #191919;
     font-size: 2rem;
-    font-family: 'Abril Fatface', serif;
+    font-family: 'Moniqa-Heading', serif;
 }
 
 .flexDiv{
     display: flex;
     flex-direction: row;
     width: 100%;
-    background-color: #001514;
+    background-color: #F0E9DF;
     justify-content: center;
 }
 

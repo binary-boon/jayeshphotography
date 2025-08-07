@@ -11,7 +11,7 @@
 .Servicediv {
   display: flex;
   width: 100%;
-  background-color: #A63446;
+  background-color: #F0E9DF;
   justify-content: center;
   padding-top: 10%;
   padding-bottom: 10%;
@@ -21,7 +21,8 @@
 .titleDiv {
   display: flex;
   width: 100%;
-  color: #F0E9DF;
+  color: #3c211e;
+ 
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -29,33 +30,65 @@
 }
 
 .titleDiv h1 {
-  font-size: 3rem;
+  font-size: 5rem;
+  font-family: 'Moniqa-Heading', serif;
 }
 
 .titleDiv h2 {
   text-align: center;
-  color: #F0E9DF;
+  color: #3c211e;
+  font-family: 'Moniqa-Paragraph', serif;
+  letter-spacing: 0.09rem;
+  line-height: 3ch;
+  font-size: 2rem;
 }
 
 .Servicecomponent {
   display: flex;
   flex-direction: row;
-  background-color: #A63446;
+  background-color: #F0E9DF;
   width: 100%;
   padding: 1%;
   justify-content: center;
+}
+
+.Servicecomponent h1 {
+  font-size: 3rem;
+  font-family: 'Moniqa-Heading', serif;
 }
 
 .btnDiv {
   display: flex;
   width: 100%;
+  
   margin-top: 2%;
   justify-content: center;
 }
 
+.btn{
+justify-self: center;
+  align-items: center;
+  width: max-content;
+  font-size: 2rem;
+   background-color: #3c211e ;
+   color: whitesmoke;
+  padding: 1%;
+  
+  font-family: 'Moniqa-Heading', serif;
+}
+
+.btn:hover {
+  background-color: whitesmoke ;
+  color: #3c211e ;
+  border: solid;
+  transition: ease-in-out 0.5s;
+  
+}
+
 .serviceInfo {
   padding: 1%;
-  color: white;
+  color: #3c211e;
+  font-family: 'Moniqa-Heading', serif;
   text-align: center;
 }
 

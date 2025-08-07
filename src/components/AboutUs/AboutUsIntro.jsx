@@ -13,7 +13,8 @@ const AboutUsIntro = () => {
                 <h2>
                     Capturing moments is easy, but capturing the essence of emotions is an art. 
                     With over 500 weddings shot across the globe, Jayesh Khaturia Photography ensures 
-                    that your special day is framed in perfection. Our team of skilled photographers 
+                    that your special day is framed in perfection. <br/> <br/>
+                    Our team of skilled photographers 
                     and cinematographers work passionately to bring joy to every couple and their families.
                 </h2>
                 <button className={styles.button}>Learn More</button>

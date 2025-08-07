@@ -16,7 +16,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #001514;
+  background: #F0E9DF;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +49,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #001514;
+  background: #F0E9DF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@
 
 .errorContent {
   text-align: center;
-  color: #63768D;
+  color: #F0E9DF;
   z-index: 2;
   
   h3 {
@@ -66,7 +66,7 @@
     margin-bottom: 0.5rem;
     font-weight: 400;
 
-    color: #F0E9DF;
+    color: #f0dfeb;
   }
   
   p {
@@ -133,14 +133,14 @@
   text-align: center;
   max-width: 1200px;
   width: 100%;
-  color: white;
+  color: rgba(244, 237, 231, 1);
 }
 
 .textContainer {
   margin-bottom: 3rem;
   backdrop-filter: blur(20px) saturate(120%);
-  background: rgba(0, 21, 20, 0.75);
-  border: 1px solid rgba(240, 233, 223, 0.15);
+  background: rgba(244, 237, 231, 0.75);
+  border: 1px solid rgba(244, 237, 231, 1);
   border-radius: 2px;
   padding: 4rem 3rem;
   box-shadow: 
@@ -149,27 +149,35 @@
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 400;
-  line-height: 1.2;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  
+  line-height: 1.0;
   margin-bottom: 2rem;
-  font-family: 'Abril Fatface', serif;
-  letter-spacing: -0.01em;
-  color: #F0E9DF;
+  font-family: 'Moniqa-Heading', serif;
+  font-weight: 400;
+  
+  
+  color: #0a0a0a;
   text-shadow: none;
   
   .titleAccent {
-    color: #E27396;
-    font-weight: 400;
+    color: #3e2020;
+    font-weight:500;
+
   }
 }
 
+.heroTitle span {
+
+}
+
 .heroSubtitle {
-  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  font-size: clamp(2rem, 2.2vw, 1.3rem);
   font-weight: 300;
-  line-height: 1.7;
-  color: #F0E9DF;
-  font-family: 'Quattrocento', serif;
+  line-height: 1.0;
+  letter-spacing: 0.09rem;
+  color: #3e2020;
+  font-family: 'Moniqa-Paragraph', serif;
   max-width: 580px;
   margin: 0 auto;
   text-shadow: none;
@@ -216,15 +224,15 @@
 }
 
 .primaryBtn {
-  background: #E27396;
+  background: #3e2020;
   color: #F0E9DF;
-  font-family: 'Abril Fatface', serif;
-  border: 1px solid #E27396;
+  font-family: 'Bodoni Moda', serif;
+  border: 1px solid #3e2020;
   
   &:hover {
     background: transparent;
-    color: #E27396;
-    border: 1px solid #E27396;
+    color: #F0E9DF;
+    border: 1px solid #F0E9DF;
     transform: translateY(-1px);
   }
 }
@@ -232,13 +240,15 @@
 .secondaryBtn {
   background: transparent;
   color: #F0E9DF;
-  font-family: 'Abril Fatface', serif;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 200;
   border: 1px solid rgba(240, 233, 223, 0.4);
   
   &:hover {
-    background: rgba(240, 233, 223, 0.05);
+    background: #F0E9DF;
     border: 1px solid rgba(240, 233, 223, 0.6);
     transform: translateY(-1px);
+    color: #0a0a0a;
   }
 }
 

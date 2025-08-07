@@ -247,7 +247,7 @@ const AboutUS = () => {
           <p className={styles.ctaText}>
             Let's discuss how we can bring your vision to life
           </p>
-          <button  className={styles.ctaButton}><a  href="/Contact">Get In Touch</a></button>
+          <button className={styles.ctaButton}><a href="/Contact" style={{textDecoration: 'none'}} >Get In Touch</a></button>
         </div>
       </section>
     </div>

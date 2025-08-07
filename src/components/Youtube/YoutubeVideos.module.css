@@ -3,22 +3,24 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 16px;
+    background-color: #F0E9DF;
   }
   
   .heading {
     text-align: center;
     font-size: 3rem;
-    
+    font-family: 'Moniqa-Heading', serif;
     font-weight: bold;
     margin-bottom: 16px;
-    color: bisque;
+    color: #3c211e;
   }
 
   .subheading {
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 2rem;
     font-weight: 300;
+    font-family: 'Moniqa-Paragraph', serif;
   }
 
   .textdiv{
@@ -50,6 +52,7 @@
     padding: 8px;
     text-align: center;
     font-size: 14px;
+    color: #3c211e;
     font-weight: 500;
   }
   

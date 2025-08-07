@@ -3,9 +3,9 @@
 /* Container */
 .container {
   min-height: 100vh;
-  background-color: #001514;
-  color: #F0E9DF;
-  font-family: 'Quattrocento', serif;
+  background-color:#F0E9DF;
+  color: #000000;
+  
   line-height: 1.6;
 }
 
@@ -22,21 +22,26 @@
 
 .heroContent {
   flex: 1;
+  font-family: 'Moniqa-Paragraph', serif;
+  letter-spacing: 0.09rem;
 }
 
 .heroTitle {
-  font-family: 'Abril Fatface', serif;
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-family: 'Moniqa-Heading', serif;
+  font-size: clamp(5rem, 8vw, 5rem);
   font-weight: 400;
-  color: #F0E9DF;
+  letter-spacing: 0.09rem;
+  color: #3e2020;
   margin: 0 0 1.5rem 0;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .heroSubtitle {
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: #63768D;
   margin: 0;
+  font-family: 'Moniqa-Paragraph', serif;
+  letter-spacing: 0.09rem;
   max-width: 500px;
 }
 
@@ -60,9 +65,9 @@
 }
 
 .placeholderText {
-  font-family: 'Abril Fatface', serif;
+  font-family: 'Moniqa-Heading', serif;
   font-size: 1.5rem;
-  color: #F0E9DF;
+  color: #000000;
   position: relative;
   z-index: 1;
   opacity: 0.8;
@@ -72,6 +77,8 @@
 .mainContent {
   padding: 4rem 4rem 2rem;
   max-width: 1200px;
+  font-family: 'Moniqa-Paragraph', serif;
+  letter-spacing: 0.09rem;
   margin: 0 auto;
 }
 
@@ -111,16 +118,17 @@
 }
 
 .sectionTitle {
-  font-family: 'Abril Fatface', serif;
-  font-size: 2.5rem;
-  color: #E27396;
+  font-family: 'Moniqa-Heading', serif;
+  font-size: 5rem;
+  color: #3e2020;
   margin: 0 0 1.5rem 0;
   font-weight: 400;
 }
 
 .bodyText {
-  font-size: 1.125rem;
-  color: #F0E9DF;
+  font-size: 2rem;
+  color: #000000;
+  letter-spacing: 0.09rem;
   margin: 0 0 1.5rem 0;
   opacity: 0.9;
 }
@@ -166,9 +174,10 @@
 }
 
 .cardTitle {
-  font-family: 'Abril Fatface', serif;
+  font-family: 'Moniqa-Heading', serif;
   font-size: 3rem;
-  color: #E27396;
+  letter-spacing: 0.09rem;
+  color: #3e2020;
   margin: 0 0 0.5rem 0;
   font-weight: 400;
 }
@@ -176,11 +185,13 @@
 .cardText {
   font-size: 1rem;
   color: #63768D;
+  letter-spacing: 0.09rem;
   margin: 0;
 }
 
 .aboutText {
   max-width: 800px;
+  letter-spacing: 0.09rem;
   margin: 2rem 0;
 }
 
@@ -195,6 +206,8 @@
 .founderContent {
   display: grid;
   grid-template-columns: 300px 1fr;
+  font-family: 'Moniqa-Paragraph', serif;
+  letter-spacing: 0.09rem;
   gap: 3rem;
   align-items: center;
 }
@@ -217,12 +230,16 @@
 
 .founderText {
   max-width: 600px;
+  font-family: 'Moniqa-Paragraph', serif;
+  letter-spacing: 0.09rem;
+  
 }
 
 .founderName {
-  font-family: 'Abril Fatface', serif;
-  font-size: 1.75rem;
-  color: #E27396;
+  font-family: 'Moniqa-Heading', serif;
+  letter-spacing: 0.09rem;
+  font-size: 3rem;
+  color: #3e2020;
   margin: 0 0 1rem 0;
   font-weight: 400;
 }
@@ -240,11 +257,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  font-family: 'Moniqa-Paragraph', serif;
+  letter-spacing: 0.09rem;
   margin-top: 2rem;
 }
 
 .locationCard {
-  background: rgba(226, 115, 150, 0.1);
+  background: rgba(62, 32, 32, 1);
   border: 1px solid rgba(226, 115, 150, 0.2);
   border-radius: 8px;
   padding: 1.5rem;
@@ -259,15 +278,16 @@
 }
 
 .locationName {
-  font-family: 'Abril Fatface', serif;
-  font-size: 1.25rem;
-  color: #E27396;
+  font-family: 'Moniqa-Heading', serif;
+  letter-spacing: 0.09rem;
+  font-size: 1.75rem;
+  color: #ffffff;
   margin: 0 0 0.5rem 0;
   font-weight: 400;
 }
 
 .locationDetail {
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   color: #63768D;
   margin: 0;
   opacity: 0.9;
@@ -280,9 +300,10 @@
 }
 
 .servicesTitle {
-  font-family: 'Abril Fatface', serif;
-  font-size: 2.5rem;
-  color: #F0E9DF;
+  font-family: 'Moniqa-Heading', serif;
+  letter-spacing: 0.09rem;
+  font-size: 5rem;
+  color: #000000;
   text-align: center;
   margin: 0 0 3rem 0;
   font-weight: 400;
@@ -328,19 +349,22 @@
 
 .serviceContent {
   padding: 1.5rem;
+  font-family: 'Moniqa-Paragraph', serif;
+  letter-spacing: 0.09rem;
 }
 
 .serviceTitle {
-  font-family: 'Abril Fatface', serif;
-  font-size: 1.5rem;
-  color: #E27396;
+  font-family: 'Moniqa-Heading', serif;
+  letter-spacing: 0.09rem;
+  font-size: 2rem;
+  color: #3e2020;
   margin: 0 0 1rem 0;
   font-weight: 400;
 }
 
 .serviceText {
-  font-size: 1rem;
-  color: #F0E9DF;
+  font-size: 1.6rem;
+  color: #000000;
   margin: 0;
   opacity: 0.9;
 }
@@ -348,6 +372,7 @@
 /* Call to Action */
 .cta {
   padding: 4rem;
+  
   margin: 2rem 0 0;
   background: linear-gradient(135deg, rgba(99, 118, 141, 0.1) 0%, rgba(226, 115, 150, 0.1) 100%);
   border-top: 1px solid rgba(226, 115, 150, 0.2);
@@ -357,29 +382,36 @@
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+  font-family: 'Moniqa-Paragraph', serif;
+  letter-spacing: 0.09rem;
+  
 }
 
 .ctaTitle {
-  font-family: 'Abril Fatface', serif;
+  font-family: 'Moniqa-Heading', serif;
+  letter-spacing: 0.09rem;
   font-size: 2.5rem;
-  color: #F0E9DF;
+  color: #3e2020;
   margin: 0 0 1rem 0;
   font-weight: 400;
 }
 
 .ctaText {
-  font-size: 1.125rem;
-  color: #63768D;
+  font-size: 1.8rem;
+  color: #0a0a0a;
   margin: 0 0 2rem 0;
+  text-decoration: none;
 }
 
+
+
 .ctaButton {
-  background: linear-gradient(135deg, #E27396 0%, #63768D 100%);
+  background: #3e2020;
   color: #F0E9DF;
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1.125rem;
-  font-family: 'Quattrocento', serif;
+  font-family: 'Moniqa-Heading', serif;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -387,11 +419,24 @@
   letter-spacing: 1px;
   font-weight: 700;
 }
+.ctaButton a{
+  color: #F0E9DF;
+  font-family: 'Moniqa-Heading', serif;
+  font-size: 1.5rem;
+}
+
+.ctaButton:hover a {
+  color: #3e2020;
+  font-family: 'Moniqa-Heading', serif;
+}
+
+
 
 .ctaButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(226, 115, 150, 0.3);
-  background: linear-gradient(135deg, #E27396 0%, #E27396 100%);
+  box-shadow: 0 8px 25px rgba(5, 5, 5, 0.3);
+  background: #F0E9DF;
+  text-decoration: none;
 }
 
 /* Responsive Design */
@@ -459,6 +504,7 @@
   
   .locationsList {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
   }
   
   .ctaTitle {

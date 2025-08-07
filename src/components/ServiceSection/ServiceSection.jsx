@@ -80,12 +80,11 @@ const ServiceSection = () => {
 
       <div className={Styles.btnDiv}>
         <motion.button
-          className={VideoStyles.primaryBtn}
+          className={Styles.btn}
           variants={buttonVariants}
-          initial="hidden"
-          animate="visible"
+          
         >
-          Get Free Consultation!
+          Get Free Consultation
         </motion.button>
       </div>
     </div>

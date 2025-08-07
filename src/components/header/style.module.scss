@@ -1,5 +1,5 @@
 .header{
-    background-color: #001514;
+    background-color: #F0E9DF;
     position: fixed;
     width: 100%;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
     z-index: 500;
 
     .background{
-        background-color: #001514;
+        background-color: #F0E9DF;
         opacity: 0.5;
         height: 100%;
         width: 100%;
@@ -46,7 +46,7 @@
 
         a{
             text-decoration: none;
-            color: white;
+            color: rgb(0, 0, 0);
             position: absolute;
             left: 0;
         }
@@ -72,7 +72,7 @@
             .label{
                 position: relative;
                 display: flex;
-                color: white;
+                color: rgb(15, 15, 15);
                 align-items: center;
                 
                 
@@ -82,7 +82,7 @@
                 &:nth-of-type(2){
                     position: absolute;
                     opacity: 0;
-                    color: white;
+                    color: #3c211e;
                 }
             }
 
